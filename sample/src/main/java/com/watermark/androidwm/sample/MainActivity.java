@@ -19,8 +19,9 @@ package com.watermark.androidwm.sample;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,9 +39,6 @@ import com.watermark.androidwm.bean.WatermarkImage;
 import com.watermark.androidwm.bean.WatermarkText;
 import com.watermark.androidwm.listener.DetectFinishListener;
 
-import timber.log.Timber;
-//import com.watermark.androidwm.utils.BitmapUtils;
-
 /**
  * This is the sample for library: androidwm.
  *
@@ -49,6 +47,7 @@ import timber.log.Timber;
  */
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "Watermark";
     private Button btnAddText;
     private Button btnAddImg;
     private Button btnAddInVisibleImage;
@@ -138,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
             WatermarkBuilder
                     .create(this, backgroundView)
                     .loadWatermarkImage(watermarkBitmap)
-                    .setInvisibleWMListener(true, new BuildFinishListener<Bitmap>() {
+                    .setInvisibleWMListener(true, new BuildFinishListener<>() {
                         @Override
                         public void onSuccess(Bitmap object) {
                             progressBar.setVisibility(View.GONE);
@@ -147,14 +146,14 @@ public class MainActivity extends AppCompatActivity {
                             if (object != null) {
                                 backgroundView.setImageBitmap(object);
                                 // Save to local needs permission.
-//                                BitmapUtils.saveAsPNG(object, "sdcard/DCIM/", true);
+                                // BitmapUtils.saveAsPNG(object, "sdcard/DCIM/", true);
                             }
                         }
 
                         @Override
                         public void onFailure(String message) {
                             progressBar.setVisibility(View.GONE);
-                            Timber.e(message);
+                            Log.e(TAG, message);
                         }
                     });
         });
@@ -166,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
             WatermarkBuilder
                     .create(this, backgroundView)
                     .loadWatermarkText(watermarkText)
-                    .setInvisibleWMListener(true, new BuildFinishListener<Bitmap>() {
+                    .setInvisibleWMListener(true, new BuildFinishListener<>() {
                         @Override
                         public void onSuccess(Bitmap object) {
                             progressBar.setVisibility(View.GONE);
@@ -180,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onFailure(String message) {
                             progressBar.setVisibility(View.GONE);
-                            Timber.e(message);
+                            Log.e(TAG, message);
                         }
                     });
         });
@@ -202,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onFailure(String message) {
                             progressBar.setVisibility(View.GONE);
-                            Timber.e(message);
+                            Log.e(TAG, message);
                         }
                     });
         });
@@ -226,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onFailure(String message) {
                             progressBar.setVisibility(View.GONE);
-                            Timber.e(message);
+                            Log.e(TAG, message);
                         }
                     });
         });

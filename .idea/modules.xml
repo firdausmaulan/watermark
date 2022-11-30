@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidWM.iml" filepath="$PROJECT_DIR$/AndroidWM.iml" />
-      <module fileurl="file://$PROJECT_DIR$/androidwm/androidwm.iml" filepath="$PROJECT_DIR$/androidwm/androidwm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/watermark.iml" filepath="$PROJECT_DIR$/.idea/modules/watermark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/androidwm/watermark.androidwm.iml" filepath="$PROJECT_DIR$/.idea/modules/androidwm/watermark.androidwm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/androidwm/watermark.androidwm.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/androidwm/watermark.androidwm.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/androidwm/watermark.androidwm.main.iml" filepath="$PROJECT_DIR$/.idea/modules/androidwm/watermark.androidwm.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/androidwm/watermark.androidwm.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/androidwm/watermark.androidwm.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sample/watermark.sample.iml" filepath="$PROJECT_DIR$/.idea/modules/sample/watermark.sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sample/watermark.sample.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/sample/watermark.sample.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sample/watermark.sample.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sample/watermark.sample.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sample/watermark.sample.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/sample/watermark.sample.unitTest.iml" />
     </modules>
   </component>
 </project>
